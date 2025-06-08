@@ -1,41 +1,187 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <title>Hacked by NULLBYTE</title>
+  <meta charset="UTF-8" />
+  <title>YOU'RE OWNED - Nullbyte</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+
     body {
-      background-color: black;
-      color: white;
+      margin: 0;
+      background: #0f0f0f;
+      color: #00ff99;
+      font-family: 'Share Tech Mono', monospace;
+      height: 100vh;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      user-select: none;
       text-align: center;
-      font-family: monospace;
-      margin-top: 50px;
     }
+
+    /* Glitch effect */
+    .glitch {
+      position: relative;
+      font-size: 4em;
+      color: #00ff99;
+      letter-spacing: 0.05em;
+      animation: glitch-anim 2s infinite;
+    }
+    .glitch::before,
+    .glitch::after {
+      content: attr(data-text);
+      position: absolute;
+      left: 0;
+      width: 100%;
+      opacity: 0.8;
+      clip: rect(0, 900px, 0, 0);
+    }
+    .glitch::before {
+      animation: glitch-anim-before 2s infinite;
+      color: #ff005c;
+      z-index: -1;
+    }
+    .glitch::after {
+      animation: glitch-anim-after 2s infinite;
+      color: #00ffff;
+      z-index: -2;
+    }
+
+    @keyframes glitch-anim {
+      0%, 20%, 40%, 60%, 80%, 100% {
+        transform: translate(0);
+      }
+      10% {
+        transform: translate(-5px, -3px);
+      }
+      30% {
+        transform: translate(5px, 3px);
+      }
+      50% {
+        transform: translate(-5px, 3px);
+      }
+      70% {
+        transform: translate(5px, -3px);
+      }
+      90% {
+        transform: translate(-3px, 0);
+      }
+    }
+    @keyframes glitch-anim-before {
+      0%, 20%, 40%, 60%, 80%, 100% {
+        clip: rect(0, 900px, 0, 0);
+        transform: translate(0);
+      }
+      10% {
+        clip: rect(20px, 9999px, 45px, 0);
+        transform: translate(-5px, -3px);
+      }
+      30% {
+        clip: rect(85px, 9999px, 140px, 0);
+        transform: translate(5px, 3px);
+      }
+      50% {
+        clip: rect(10px, 9999px, 35px, 0);
+        transform: translate(-5px, 3px);
+      }
+      70% {
+        clip: rect(50px, 9999px, 90px, 0);
+        transform: translate(5px, -3px);
+      }
+      90% {
+        clip: rect(25px, 9999px, 50px, 0);
+        transform: translate(-3px, 0);
+      }
+    }
+    @keyframes glitch-anim-after {
+      0%, 20%, 40%, 60%, 80%, 100% {
+        clip: rect(0, 900px, 0, 0);
+        transform: translate(0);
+      }
+      10% {
+        clip: rect(85px, 9999px, 140px, 0);
+        transform: translate(5px, 3px);
+      }
+      30% {
+        clip: rect(20px, 9999px, 45px, 0);
+        transform: translate(-5px, -3px);
+      }
+      50% {
+        clip: rect(50px, 9999px, 90px, 0);
+        transform: translate(5px, -3px);
+      }
+      70% {
+        clip: rect(10px, 9999px, 35px, 0);
+        transform: translate(-5px, 3px);
+      }
+      90% {
+        clip: rect(75px, 9999px, 115px, 0);
+        transform: translate(3px, 0);
+      }
+    }
+
     img {
-      width: 200px;
-      border-radius: 50%;
-      margin-top: 30px;
+      width: 280px;
+      margin: 30px 0;
+      border: 3px solid #00ff99;
+      border-radius: 12px;
+      box-shadow: 0 0 30px #00ff99aa;
+      filter: drop-shadow(0 0 10px #00ffaa);
+      transition: transform 0.3s ease;
     }
-    h1 {
-      color: red;
-      font-size: 3em;
-      text-shadow: 0 0 10px red;
+    img:hover {
+      transform: scale(1.05) rotate(3deg);
     }
-    p {
-      font-size: 1.2em;
-      margin-top: 20px;
+
+    .zoeira {
+      max-width: 700px;
+      font-size: 1.3em;
+      color: #00ff99cc;
+      text-shadow: 0 0 5px #00ff99aa;
+      line-height: 1.6em;
+      margin-bottom: 40px;
+      user-select: text;
     }
-    .contact {
-      margin-top: 40px;
-      font-size: 1em;
-      color: gray;
+
+    .assinatura {
+      font-size: 1.1em;
+      color: #ff00cc;
+      text-shadow: 0 0 8px #ff00cc;
+      letter-spacing: 0.08em;
+      user-select: none;
+    }
+
+    .footer {
+      position: fixed;
+      bottom: 10px;
+      font-size: 0.9em;
+      color: #003300cc;
+      user-select: none;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      font-weight: 700;
     }
   </style>
 </head>
 <body>
-  <h1>HACKED BY NULLBYTE</h1>
-  <img src="https://i.imgur.com/OYVpe2W.png" alt="nullbyte">
-  <p>"I am the controller of my mind. Reality is just another game."</p>
-  <div class="contact">Instagram: <a href="https://instagram.com/01nullbyte" style="color: white;">@01nullbyte</a></div>
+
+  <div class="glitch" data-text="YOU’RE OWNED">YOU’RE OWNED</div>
+
+  <img src="https://files.catbox.moe/awa1xj.jpeg" alt="nullbyte hack" />
+
+  <div class="zoeira">
+    ADMIN MAIS FURADO QUE PENEIRAKKKK<br/>
+    CADE O TI ??<br/>
+    ⚡Nullbyte e demonthegod alinhados⚡<br/>
+    [MIND]🇵🇹 - 🇧🇷<br/>
+  </div>
+
+  <div class="assinatura">@xNullbyte · @Demonthegod</div>
+
+  <div class="footer">breach detected — system compromised — no mercy</div>
+
 </body>
 </html>
