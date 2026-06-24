@@ -15,11 +15,6 @@ body {
     position: relative;
 }
 
-::selection {
-    background: rgba(0, 255, 65, 0.2);
-    color: #00ff41;
-}
-
 .scanline {
     position: fixed;
     top: 0;
@@ -38,23 +33,14 @@ body {
 }
 
 .container {
-    max-width: 760px;
+    max-width: 800px;
     margin: 0 auto;
-    padding: 30px 20px;
-}
-
-a {
-    color: #008800;
-    text-decoration: none;
-}
-
-a:hover {
-    color: #00ff41;
+    padding: 40px 20px;
 }
 
 header {
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 60px;
 }
 
 .glitch {
@@ -65,6 +51,168 @@ header {
     text-shadow: 2px 2px 0 #003300;
 }
 
+.subtitle {
+    color: #00cc33;
+    font-size: 1.2em;
+    margin-top: 5px;
+}
+
+.divider {
+    color: #003300;
+    text-align: center;
+    margin: 20px 0;
+    letter-spacing: 3px;
+}
+
+h2 {
+    color: #00ff41;
+    font-size: 1.1em;
+    margin-bottom: 15px;
+    margin-top: 40px;
+}
+
+.blink {
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+.card {
+    background: #0d0d0d;
+    border: 1px solid #003300;
+    border-radius: 4px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.card p {
+    margin-bottom: 15px;
+    color: #00aa22;
+}
+
+.highlight {
+    color: #00ff41;
+    font-weight: 700;
+}
+
+.achievement {
+    padding: 12px 0;
+    border-bottom: 1px solid #001a00;
+    color: #00aa22;
+}
+
+.achievement:last-child {
+    border-bottom: none;
+}
+
+.date {
+    color: #006600;
+    margin-right: 10px;
+}
+
+.skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skills-grid span {
+    background: #001a00;
+    border: 1px solid #003300;
+    padding: 8px 15px;
+    border-radius: 3px;
+    font-size: 0.9em;
+    color: #00cc33;
+}
+
+.skills-grid span:hover {
+    background: #003300;
+    color: #00ff41;
+}
+
+pre {
+    color: #00aa22;
+    font-family: 'Fira Code', monospace;
+    font-size: 0.9em;
+    line-height: 1.8;
+}
+
+.stats-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+    text-align: center;
+}
+
+.stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.stat-num {
+    font-size: 2.5em;
+    font-weight: 700;
+    color: #00ff41;
+    text-shadow: 0 0 10px #00ff41;
+}
+
+.stat-label {
+    font-size: 0.8em;
+    color: #006600;
+    margin-top: 5px;
+}
+
+.wanted-card {
+    border-color: #ff0000;
+    background: #0d0000;
+    text-align: center;
+}
+
+.wanted-header {
+    margin-bottom: 15px;
+}
+
+.wanted-title {
+    color: #ff0000;
+    font-size: 1.3em;
+    font-weight: 700;
+    letter-spacing: 5px;
+}
+
+.wanted-body {
+    text-align: left;
+    padding: 0 20px;
+}
+
+.wanted-body p {
+    margin-bottom: 10px;
+    color: #ff4444;
+}
+
+.wanted-footer {
+    margin-top: 20px;
+    color: #ff0000;
+    font-size: 1.1em;
+}
+
+footer {
+    text-align: center;
+    margin-top: 60px;
+    color: #006600;
+}
+
+.matrix {
+    font-size: 0.7em;
+    word-break: break-all;
+    margin: 15px 0;
+}
+
+/* glitch effect */
 .glitch::before,
 .glitch::after {
     content: attr(data-text);
@@ -102,192 +250,6 @@ header {
     75% { transform: translate(1px, 2px); }
 }
 
-.subtitle {
-    color: #00cc33;
-    font-size: 1.1em;
-    margin-top: 5px;
-}
-
-.divider {
-    color: #003300;
-    text-align: center;
-    margin: 20px 0;
-    letter-spacing: 3px;
-}
-
-h2 {
-    color: #00ff41;
-    font-size: 1.1em;
-    margin-bottom: 12px;
-    margin-top: 30px;
-}
-
-.blink {
-    animation: blink 1s step-end infinite;
-}
-
-@keyframes blink {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0; }
-}
-
-.card {
-    background: #0d0d0d;
-    border: 1px solid #003300;
-    border-radius: 3px;
-    padding: 18px 20px;
-    margin-bottom: 18px;
-}
-
-.card p {
-    margin-bottom: 12px;
-    color: #00aa22;
-}
-
-.card p:last-child {
-    margin-bottom: 0;
-}
-
-.highlight {
-    color: #00ff41;
-    font-weight: 700;
-}
-
-.achievement {
-    padding: 10px 0;
-    border-bottom: 1px solid #001a00;
-    color: #00aa22;
-}
-
-.achievement:last-child {
-    border-bottom: none;
-}
-
-.date {
-    color: #006600;
-    margin-right: 8px;
-}
-
-.skills-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-}
-
-.skills-grid span {
-    background: #001a00;
-    border: 1px solid #003300;
-    padding: 6px 14px;
-    border-radius: 3px;
-    font-size: 0.85em;
-    color: #00cc33;
-    transition: all 0.2s;
-}
-
-.skills-grid span:hover {
-    background: #003300;
-    color: #00ff41;
-}
-
-pre {
-    color: #00aa22;
-    font-family: 'Fira Code', monospace;
-    font-size: 0.9em;
-    line-height: 1.7;
-}
-
-.stats-grid {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    gap: 15px;
-    text-align: center;
-}
-
-.stat {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.stat-num {
-    font-size: 2.2em;
-    font-weight: 700;
-    color: #00ff41;
-    text-shadow: 0 0 10px #00ff41;
-}
-
-.stat-label {
-    font-size: 0.75em;
-    color: #006600;
-    margin-top: 3px;
-}
-
-.wanted-card {
-    border-color: #ff0000;
-    background: #0d0000;
-    text-align: center;
-}
-
-.wanted-header {
-    margin-bottom: 12px;
-}
-
-.wanted-title {
-    color: #ff0000;
-    font-size: 1.2em;
-    font-weight: 700;
-    letter-spacing: 4px;
-}
-
-.wanted-body {
-    text-align: left;
-    padding: 0 15px;
-}
-
-.wanted-body p {
-    margin-bottom: 8px;
-    color: #ff4444;
-}
-
-.wanted-footer {
-    margin-top: 15px;
-    color: #ff0000;
-    font-size: 1em;
-}
-
-.contact-grid {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-}
-
-.contact-item {
-    color: #00aa22;
-    font-size: 0.95em;
-}
-
-.contact-icon {
-    color: #006600;
-    margin-right: 6px;
-}
-
-footer {
-    text-align: center;
-    margin-top: 40px;
-    margin-bottom: 30px;
-    color: #006600;
-}
-
-.matrix {
-    font-size: 0.7em;
-    word-break: break-all;
-    margin: 12px 0;
-    color: #003300;
-}
-
 @media (max-width: 600px) {
     .glitch { font-size: 2.5em; }
-    .container { padding: 20px 14px; }
-    .card { padding: 14px 16px; }
 }
